@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href= "{{ url_for('static', filename='style.css') }}">
+    <title>Jamify</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./static/img/jamify-01.png" alt = "logo"
+            width="200"
+            height="200">
+        </div>
+    
+    <div class="playlist-name-title">
+        <h2>One last thing - what will your playlist name be?</h2>
+    </div>
+    <div class="playlist-name">
+        <form method = "POST" enctype="multipart/form-data" action = "/createplaylist">
+            <label for="fname"></label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <!-- <input type="submit" value="Let's go!"> -->
+            <!-- <button type="submit" onclick="location.href = '/createplaylist';"> Let's go! </button> -->
+            <input type = "submit" value="I'm ready for my playlist">  
+        </form>
+
+    </div>
+
+</body>
+</html>

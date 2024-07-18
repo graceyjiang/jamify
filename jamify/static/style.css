@@ -1,0 +1,281 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+h1 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 50px;
+}
+        
+h2 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 24px;
+}
+
+p{
+    font-weight: regular;
+    color: white;
+    font-size: 18px;
+
+}
+
+button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 14px 24px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 200ms,background 200ms;
+    background: transparent;
+    color: rgba(255, 255, 255, .7);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .7) inset;
+}
+button:hover{
+        transform: translateY(-2px);
+    }
+    
+/*FRONT PAGE*/
+/*this is a gradient background*/
+body {
+    background: linear-gradient(-45deg, #01090f, #0f010f, #4f0824, #140819, rgb(4, 115, 143));
+	background-size: 400% 400%;
+	animation: gradient 40s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*formatting for hook and description*/
+.hook{
+    text-align: center;
+    position: fixed;
+    top: 200px;
+    right: 50px;
+    left: 50px;
+
+}
+.hook::after
+{
+    content: 'mood?';
+    font-weight: bold;
+    color: white;
+    font-size: 50px;
+    animation: trotate 8s linear infinite;
+}
+
+@keyframes trotate
+{
+    0% {content: 'mood?';
+    }
+    20% {content: 'mid-life crisis?';
+    }
+    40% {content: 'aura?';
+    }
+    60% {content: 'situationship?';
+    }
+    80% {content: 'energy?';
+    }
+}
+
+.description{
+    text-align: center;
+    position: fixed;
+    top: 420px;
+    right: 50px;
+    left: 50px;
+}
+
+.logo-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+
+}
+
+.buttons {
+    text-align:center;
+    position: fixed;
+    top: 520px;
+    right: 50px;
+    left: 50px;
+}
+
+/*RANKING PAGE*/
+.survey-title {
+    text-align: center;
+    position: fixed;
+    top: 300px;
+    right: 50px;
+    left: 50px;
+}
+
+.next {
+    position: fixed;
+    top: 600px;
+}
+/*this is all the ranking stuff*/
+html, body {
+    width: 100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+#dot-wrapper {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dot-form {
+    width: 90%
+}
+form #form-title{
+    margin-top: 0;
+    font-weight: regular;
+    align-items: center;
+
+}
+
+form #dot-slider{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    height:50px;
+}
+form #dot-slider::before {
+    content:"";
+    position: absolute;
+    height: 2px;
+    width: calc(100% * (4/5));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white
+}
+form #dot-slider input,
+form #dot-slider label {
+    box-sizing: border-box;
+    flex:1;
+    cursor: pointer;
+}
+form #dot-slider label {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+form #dot-slider label::before {
+    content: attr(data-dot-amounts);
+    position: absolute;
+    left:50%;
+    padding-top: 10px;
+    transform: translate(-50%, 45px);
+    font-size:18px;
+    color: white;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    opacity: 0.55;
+    white-space:nowrap;
+    transition: all 0.15s ease-in-out;
+}
+form #dot-slider label::after {
+    content:"";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid  white;
+    background: white;
+    border-radius: 50%;
+    pointer-events:none;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+form #dot-slider label:hover::after{
+    transform: translate(-50%, -50%) scale(1.25);
+}
+form #dot-slider input:checked + label::before{
+    font-weight: 800;
+    opacity: 1;
+}
+form #dot-slider input:checked + label::after{
+    border-width: 4px;
+    transform: translate(-50%, -50%) scale(0.75);
+    border: 2px solid white;
+
+}
+#dot-slider input{
+    display: none;
+}
+
+#dot-slider input:checked ~ #dot-input-label {
+    opacity:1;
+}
+
+/*playlist name*/
+.playlist-name{
+    text-align: center;
+}
+
+input[type=text] {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    border: 0;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 14px 24px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    outline: none;
+}
+input[type=submit] {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 14px 24px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 200ms,background 200ms;
+    background: transparent;
+    color: rgba(255, 255, 255, .7);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .7) inset;
+}
