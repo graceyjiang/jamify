@@ -3,5 +3,6 @@ Full stack web app that generates a playlist of recommended songs for the user b
 Live at:
 https://graceyjiang.pythonanywhere.com/
 
+First created at Cal Hacks by Emily Xiao, Jayna Wu, and Grace Jiang.
 Note that the app is in developer mode, so in order to access the full functionality of the app, I would have to add you as a user. 
 
